@@ -1,0 +1,33 @@
+server:
+  port: 8888
+
+gateway:
+  csdn:
+     PaaSID: csdndemo
+     PaaSToken: mA8qpb20EEMP5OHHLAjPyaPXg90h04Ga
+     nonce: 123456789abcdefg
+     host: https://blog.csdn.net
+
+spring:
+  application:
+    name: gateway-application
+  cloud:
+    # Spring Cloud Gateway 配置项，对应 GatewayProperties 类
+    gateway:
+      # 路由配置项，对应 RouteDefinition 数组
+      routes:
+        - id: csdn1 # 路由的编号
+          uri: https://blog.csdn.net # 路由到的目标地址,只能到域名部分 https://blog.csdn.net/dear_little_bear
+          predicates: # 断言，作为路由的匹配条件，对应 RouteDefinition 数组
+            - Path=/csdn1
+          filters:
+            - StripPrefix=1
+            - AddRequestHeader=X-Request-red, blue
+# 记录网关日志
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+    reactor.netty: DEBUG
