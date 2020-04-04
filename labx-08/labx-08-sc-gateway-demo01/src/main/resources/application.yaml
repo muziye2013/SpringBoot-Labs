@@ -10,8 +10,8 @@ spring:
     gateway:
       # 路由配置项，对应 RouteDefinition 数组
       routes:
-        - id: yudaoyuanma # 路由的编号
-          uri: http://www.iocoder.cn # 路由到的目标地址
+        - id: csdn # 路由的编号
+          uri: https://blog.csdn.net # 路由到的目标地址,只能到域名部分 https://blog.csdn.net/dear_little_bear
           predicates: # 断言，作为路由的匹配条件，对应 RouteDefinition 数组
             - Path=/blog
           filters:
@@ -22,3 +22,17 @@ spring:
             - Path=/oschina
           filters: # 过滤器，对请求进行拦截，实现自定义的功能，对应 FilterDefinition 数组
             - StripPrefix=1
+        - id: avatar # 路由的编号
+          uri: http://localhost:9000 # 路由的目标地址
+          predicates: # 断言，作为路由的匹配条件，对应 RouteDefinition 数组
+            - Path=/test/img/**
+          filters: # 过滤器，对请求进行拦截，实现自定义的功能，对应 FilterDefinition 数组
+            - StripPrefix=1
+# 记录网关日志
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+    reactor.netty: DEBUG
