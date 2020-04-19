@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>lab-22-validation-01</module>
+        <module>lab-22-ex-validation-01</module>
     </modules>
 
 
