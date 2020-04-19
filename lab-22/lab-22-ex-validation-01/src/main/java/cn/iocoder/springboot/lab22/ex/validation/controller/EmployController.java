@@ -102,4 +102,14 @@ public class EmployController {
         return "添加职员信息成功" ;
     }
 
+    /**
+     * 使用springvalidation默认的实现方式，返回数据不友好
+     * @param
+     * @return
+     */
+    @PostMapping("/addEmployeeByValid")
+    public Object addEmployeeByValid(@RequestBody @Valid Employee employee1){
+        return "添加职员信息成功" ;
+    }
+
 }
