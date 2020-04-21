@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.lab22.ex.validation.domain;
+package cn.iocoder.springboot.lab22.validation.dto;
 
 import lombok.Data;
 

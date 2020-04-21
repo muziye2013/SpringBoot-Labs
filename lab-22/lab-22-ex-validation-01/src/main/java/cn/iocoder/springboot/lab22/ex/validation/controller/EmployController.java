@@ -5,6 +5,7 @@ import cn.iocoder.springboot.lab22.ex.validation.domain.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -53,10 +54,8 @@ public class EmployController {
 
     //Spring boot 已帮我们把 validation 的关键对象的实例装载如 IOC 容器中
     @Autowired
-    private ValidatorFactory autowiredValidatorFactory;
+    private Validator validator;
 
-    @Autowired
-    private Validator autowiredValidator;
     /**
      * 调用validator实现
      * @param employee
@@ -64,9 +63,9 @@ public class EmployController {
      */
     @PostMapping("/validator")
     public Object addEmployee(@RequestBody Employee employee){
-        System.out.println("这里将导入 由 Springboot 的 IOC 容器中获取的 校验器工厂和 校验器类");
+        /*System.out.println("这里将导入 由 Springboot 的 IOC 容器中获取的 校验器工厂和 校验器类");
         System.out.println("validator工厂类:"+ autowiredValidatorFactory.toString());
-        System.out.println("validator类："+ autowiredValidator.toString());
+        System.out.println("validator类："+ validator.toString());*/
 
         /**
          * 下述的工厂类和校验器类也可以使用上述由IOC容器中获取的对象实例代替
@@ -107,9 +106,58 @@ public class EmployController {
      * @param
      * @return
      */
-    @PostMapping("/addEmployeeByValid")
-    public Object addEmployeeByValid(@RequestBody @Valid Employee employee1){
+    @PostMapping("/addEmployeeByDefault")
+    public Object addEmployeeByDefault(@RequestBody @Valid Employee employee1){
         return "添加职员信息成功" ;
     }
 
+    @PostMapping("/addEmployeeByAnnotationGroup")
+    public Object addEmployeeByAnnotationGroup(@Validated(Employee.AGroup.class) @RequestBody Employee employee1){
+        return "添加职员信息成功" ;
+    }
+
+
+    /**
+     * 使用分组验证，在数据传入前，不做判断（没有加任何声明式注解），然后根据条件，采用不同的数据验证方式
+     * */
+    @PostMapping("/addEmployeeByGroup")
+    public Object addEmployeeByGroup(@RequestBody Employee employee1){
+        String validateResult = validateUserByGroup(employee1,"1");
+        return validateResult.isEmpty()==true?"添加职员信息成功" :validateResult;
+    }
+
+    /**
+     * 根据userid，进行条件判断，采用不同的数据验证方式
+     * */
+    public String validateUserByGroup(Employee employee1, String userId){
+        //这里根据传入的userid，来选择不同的分组。省略了此处代码
+
+        //验证AGroup（约束设置为AGroup），得到校验结果信息 Set
+        Set<ConstraintViolation<Employee>>  constraintViolationSet1 = validator.validate(employee1,Employee.AGroup.class);
+
+        //验证BGroup（约束设置为BGroup），得到校验结果信息 Set
+        Set<ConstraintViolation<Employee>> constraintViolationSet2 = validator.validate(employee1,Employee.BGroup.class);
+
+        //验证默认约束项（未添加group），得到校验结果信息 Set
+        Set<ConstraintViolation<Employee>> constraintViolationSet3 = validator.validate(employee1);
+
+        //StringBuilder组装异常信息
+        StringBuilder builder = new StringBuilder();
+        //遍历拼装
+        constraintViolationSet1.forEach(violationInfo -> {
+            builder.append(violationInfo.getMessage() + lineSeparator);
+        });
+        constraintViolationSet2.forEach(violationInfo -> {
+            builder.append(violationInfo.getMessage() + lineSeparator);
+        });
+        constraintViolationSet3.forEach(violationInfo -> {
+            builder.append(violationInfo.getMessage() + lineSeparator);
+        });
+        if (builder.toString().length() > 0){
+            builder.insert(0,"use validator :" +lineSeparator);
+            return builder.toString();
+        }
+
+        return "";
+    }
 }

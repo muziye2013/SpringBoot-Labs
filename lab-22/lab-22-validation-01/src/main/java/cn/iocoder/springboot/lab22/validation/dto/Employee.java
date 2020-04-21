@@ -1,15 +1,13 @@
-package cn.iocoder.springboot.lab22.ex.validation.domain;
+package cn.iocoder.springboot.lab22.validation.dto;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.Valid;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.*;
 import java.util.Date;
+
+//javax.validation.constraints包下所支持的一些约束类型
 
 /**
  * 员工信息
@@ -18,6 +16,7 @@ import java.util.Date;
  * */
 @Data
 public class Employee {
+
     public interface AGroup{}
 
     public interface BGroup{}
@@ -52,14 +51,4 @@ public class Employee {
     @Pattern(regexp = "^[1]+\\d{10}$"
             ,message = "电话号码格式错误")
     private String phoneNumber;
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", badgeCode='" + badgeCode + '\'' +
-                ", gender=" + gender +
-                ", birthDate=" + birthDate +
-                '}';
-    }
 }
