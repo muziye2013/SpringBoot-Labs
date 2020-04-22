@@ -1,9 +1,10 @@
-一个涵盖五个主流技术栈的**正经**仓库：
+一个涵盖六个主流技术栈的**正经**仓库：
 * [《Spring Boot 专栏》](https://github.com/YunaiV/SpringBoot-Labs#spring-boot-%E4%B8%93%E6%A0%8F)
 * [《Spring Cloud Alibaba 专栏》](https://github.com/YunaiV/SpringBoot-Labs#spring-cloud-alibaba-%E4%B8%93%E6%A0%8F)
 * [《Spring Cloud 专栏》](https://github.com/YunaiV/SpringBoot-Labs#spring-cloud-%E4%B8%93%E6%A0%8F)
 * [《Dubbo 专栏》](https://github.com/YunaiV/SpringBoot-Labs#Dubbo-%E4%B8%93%E6%A0%8F)
 * [《消息队列 MQ 专栏》](https://github.com/YunaiV/SpringBoot-Labs#%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-mq-%E4%B8%93%E6%A0%8F)
+* [《分布式事务专栏》](https://github.com/YunaiV/SpringBoot-Labs#分布式事务专栏)
 
 作为一个热爱**深夜**撸码的 18 岁头发茂密的可爱小男孩，希望大佬能够**一键三连**。
 
@@ -34,7 +35,7 @@
 
 * [《芋道 Spring Boot 热部署入门》](http://www.iocoder.cn/Spring-Boot/hot-swap/?github) 对应 [lab-48](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-48)
 * [《芋道 Spring Boot 消除冗余代码 Lombok 入门》](http://www.iocoder.cn/Spring-Boot/Lombok/?github) 对应 [lab-49](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-49)
-* 《芋道 Spring Boot 对象转换 MapStruct 入门》计划中...
+* [《芋道 Spring Boot 对象转换 MapStruct 入门》](http://www.iocoder.cn/Spring-Boot/MapStruct/?github) 对应 [lab-55](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-55)
 
 ## Web 开发
 
@@ -65,10 +66,15 @@
 * [《芋道 Spring Boot JPA 入门》](http://www.iocoder.cn/Spring-Boot/JPA/?github) 对应 [lab-13](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-13)
 * [《芋道 Spring Boot JdbcTemplate 入门》](http://www.iocoder.cn/Spring-Boot/JdbcTemplate/?github) 对应 [lab-14](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-14)
 * [《芋道 Spring Boot Elasticsearch 入门》](http://www.iocoder.cn/Spring-Boot/Elasticsearch/?github) 对应 [lab-15](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-15)
+* 《芋道 Spring Boot Solr 入门》计划中...
 * [《芋道 Spring Boot MongoDB 入门》](http://www.iocoder.cn/Spring-Boot/MongoDB/?github) 对应 [lab-16](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-16)
 * [《芋道 Spring Boot 多数据源（读写分离）入门》](http://www.iocoder.cn/Spring-Boot/dynamic-datasource/?github) 对应 [lab-17](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-17)
 * [《芋道 Spring Boot 分库分表入门》](http://www.iocoder.cn/Spring-Boot/sharding-datasource/?github) 对应 [lab-18](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-18)
 * [《芋道 Spring Boot 数据库版本管理入门》](http://www.iocoder.cn/Spring-Boot/database-version-control/?github) 对应 [lab-20](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-20)
+
+## 事务管理
+
+* [《芋道 Spring Boot 分布式事务 Seata 入门》](http://www.iocoder.cn/Spring-Boot/Seata/?github) 对应 [lab-52](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-52)
 
 ## 安全控制
 
@@ -87,6 +93,7 @@
 * [《芋道 Spring Boot 消息队列 Kafka 入门》](http://www.iocoder.cn/Spring-Boot/Kafka/?github) 对应 [lab-03](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-03)
 * [《芋道 Spring Boot 消息队列 RabbitMQ 入门》](http://www.iocoder.cn/Spring-Boot/RabbitMQ/?github) 对应 [lab-04](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-04)
 * [《芋道 Spring Boot 消息队列 ActiveMQ 入门》](http://www.iocoder.cn/Spring-Boot/ActiveMQ/?github) 对应 [lab-32](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-32)
+* [《芋道 Spring Boot 事件机制 Event 入门》](http://www.iocoder.cn/Spring-Boot/Event/?github) 对应 对应 [lab-54](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-54)
 
 ## 配置中心
 
@@ -139,8 +146,9 @@
 * [《芋道 Spring Cloud Alibaba 服务调用 Dubbo 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Dubbo/?github) 对应 [labx-07](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-07)
 * [《芋道 Spring Cloud Alibaba 服务容错 Sentinel 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Sentinel/?github) 对应 [labx-04](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-04)
 * [《芋道 Spring Cloud Alibaba 消息队列 RocketMQ 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/RocketMQ/?github) 对应 [labx-06](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-06)
+* [《芋道 Spring Cloud Alibaba 事件总线 Bus RocketMQ 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Bus-RocketMQ/?github) 对应 [labx-20](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-20)
 * [《芋道 Spring Cloud Alibaba 配置中心 Nacos 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Nacos-Config/?github) 对应 [labx-05](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-05)
-* 《芋道 Spring Cloud Alibaba 分布式事务 Seata 入门》
+* [《芋道 Spring Cloud Alibaba 分布式事务 Seata 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Seata/?github) 对应 [labx-17](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-17)
 
 ## 推荐搭配食用
 
@@ -181,7 +189,7 @@
 
 * [《芋道 Spring Cloud Alibaba 配置中心 Nacos 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Nacos-Config/?github) 对应 [labx-05](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-05)
 * [《芋道 Spring Cloud 配置中心 Apollo 入门》](http://www.iocoder.cn/Spring-Cloud/Apollo/?github) 对应 [labx-09](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-09)
-* [《芋道 Spring Cloud 配置中心 Spring Cloud Config 入门》](http://www.iocoder.cn/Spring-Cloud/Config/?github) 对应 [labx-12](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-12)
+* [《芋道 Spring Cloud 配置中心 Spring Cloud Config 入门》](http://www.iocoder.cn/Spring-Cloud/Spring-Cloud-Config/?github) 对应 [labx-12](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-12)
 
 ## 消息队列
 
@@ -192,9 +200,13 @@
 * [《芋道 Spring Cloud 消息队列 ActiveMQ 入门》](http://www.iocoder.cn/Spring-Cloud/ActiveMQ/?github)
 
 **Spring Cloud Bus**
-* 《芋道 Spring Cloud Alibaba 消息总线 RocketMQ 入门》计划中...
-* 《芋道 Spring Cloud 消息总线 RabbitMQ 入门》计划中...
-* 《芋道 Spring Cloud 消息总线 Kafka 入门》计划中...
+* [《芋道 Spring Cloud Alibaba 事件总线 Bus RocketMQ 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Bus-RocketMQ/?github) 对应 [labx-20](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-20)
+* [《芋道 Spring Cloud 事件总线 Bus RabbitMQ 入门》](http://www.iocoder.cn/Spring-Cloud/Bus-RabbitMQ/?github) 对应 [labx-19](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-19)
+* [《芋道 Spring Cloud 事件总线 Bus Kafka 入门》](http://www.iocoder.cn/Spring-Cloud/Bus-Kafka/?github) 对应 [labx-18](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-18)
+
+## 分布式事务
+
+* [《芋道 Spring Cloud Alibaba 分布式事务 Seata 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Seata/?github) 对应 [labx-17](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-17)
 
 ## 监控管理
 
@@ -235,6 +247,12 @@
 **[Sentinel](http://www.iocoder.cn/Sentinel/install/?github)**
 * [《芋道 Spring Cloud Alibaba 服务调用 Dubbo 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Dubbo/?github)的[「6. 整合 Sentinel」](#)小节
 
+## 分布式事务
+
+**[Seata](http://www.iocoder.cn/Seata/install/?github)**
+* [《芋道 Dubbo 分布式事务 Seata 入门》](http://www.iocoder.cn/Dubbo/Seata/?github) 对应 [lab-53](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-53)
+* [《芋道 Spring Cloud Alibaba 分布式事务 Seata 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Seata/?github)的[「2. AT 模式 + Dubbo」](#)小节
+
 ## 链路追踪
 
 **[SkyWalking](http://www.iocoder.cn/SkyWalking/install/?github)**
@@ -249,32 +267,66 @@
 
 ## RocketMQ
 
-* [《RocketMQ 安装部署》](http://www.iocoder.cn/RocketMQ/install/?github)
+* [《RocketMQ 极简入门》](http://www.iocoder.cn/RocketMQ/install/?github)
 * [《芋道 Spring Boot 消息队列 RocketMQ 入门》](http://www.iocoder.cn/Spring-Boot/RocketMQ/?github) 对应 [lab-31](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-31)
 * [《芋道 Spring Cloud Alibaba 消息队列 RocketMQ 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/RocketMQ/?github) 对应 [labx-06](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-06)
+* [《芋道 Spring Cloud Alibaba 事件总线 Bus RocketMQ 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Bus-RocketMQ/?github) 对应 [labx-20](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-20)
 * [《芋道 RocketMQ 源码解析系列》](http://www.iocoder.cn/categories/RocketMQ/?github)
 * [《性能测试 —— RocketMQ 基准测试》](http://www.iocoder.cn/Performance-Testing/RocketMQ-benchmark/?github)
 * [《RocketMQ 书单整理》](http://www.iocoder.cn/Books/RocketMQ-books-recommended/?github)
 
 ## RabbitMQ
 
-* [《RabbitMQ 安装部署》](http://www.iocoder.cn/RabbitMQ/install/?github)
+* [《RabbitMQ 极简入门》](http://www.iocoder.cn/RabbitMQ/install/?github)
 * [《芋道 Spring Boot 消息队列 RabbitMQ 入门》](http://www.iocoder.cn/Spring-Boot/RabbitMQ/?github) 对应 [lab-04](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-04)
 * [《芋道 Spring Cloud 消息队列 RabbitMQ 入门》](http://www.iocoder.cn/Spring-Cloud/RabbitMQ/?github) 对应 [labx-10](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-10)
+* [《芋道 Spring Cloud 事件总线 Bus RabbitMQ 入门》](http://www.iocoder.cn/Spring-Cloud/Bus-RabbitMQ/?github) 对应 [labx-19](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-19)
 * [《RabbitMQ 书单整理》](http://www.iocoder.cn/Books/RabbitMQ-books-recommended/?github)
 
 ## Kafka
 
-* [《Kafka 安装部署》](http://www.iocoder.cn/Kafka/install/?github)
+* [《Kafka 极简入门》](http://www.iocoder.cn/Kafka/install/?github)
 * [《芋道 Spring Boot 消息队列 Kafka 入门》](http://www.iocoder.cn/Spring-Boot/Kafka/?github) 对应 [lab-03](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-03)
 * [《芋道 Spring Cloud 消息队列 Kafka 入门》](http://www.iocoder.cn/Spring-Cloud/Kafka/?github) 对应 [labx-11](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-11)
+* [《芋道 Spring Cloud 事件总线 Bus Kafka 入门》](http://www.iocoder.cn/Spring-Cloud/Bus-Kafka/?github) 对应 [labx-18](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-18)
 * [《Kafka 书单整理》](http://www.iocoder.cn/Books/Kafka-books-recommended/?github)
 
 ## ActiveMQ
 
-* [《ActiveMQ 安装部署》](http://www.iocoder.cn/ActiveMQ/install/?github)
+* [《ActiveMQ 极简入门》](http://www.iocoder.cn/ActiveMQ/install/?github)
 * [《芋道 Spring Boot 消息队列 ActiveMQ 入门》](http://www.iocoder.cn/Spring-Boot/ActiveMQ/?github) 对应 [lab-32](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-32)
 * [《芋道 Spring Cloud 消息队列 ActiveMQ 入门》](http://www.iocoder.cn/Spring-Cloud/ActiveMQ/?github)
+
+# 分布式事务专栏
+
+目前分布式事务的解决方案有 AT、TCC、Saga、MQ、XA、BED 六种。
+
+## AT 方案
+
+* [《芋道 Spring Boot 分布式事务 Seata 入门》](http://www.iocoder.cn/Spring-Boot/Seata/?github)的[「2. AT 模式 + 多数据源」](#)小节，实现单体 Spring Boot 项目在多数据源下的分布式事务
+* [《芋道 Spring Boot 分布式事务 Seata 入门》](http://www.iocoder.cn/Spring-Boot/Seata/?github)的[「AT 模式 + HttpClient 远程调用」](#)小节，实现多个 Spring Boot 项目的分布式事务
+* [《芋道 Dubbo 分布式事务 Seata 入门》](http://www.iocoder.cn/Dubbo/Seata/?github) 的[「2. AT 模式」](#)小节，实现多个 Dubbo 服务的分布式事务。
+* [《芋道 Spring Cloud Alibaba 分布式事务 Seata 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Seata/?github)的[「3. AT 模式 + Feign」](#)小节，实现多个 Spring Cloud 服务下的分布式事务。
+
+## TCC 方案
+
+* [《TCC-Transaction 源码解析系列》](http://www.iocoder.cn/categories/TCC-Transaction/?github)
+
+## Saga 方案
+
+## MQ 方案
+
+* [《芋道 Spring Boot 消息队列 RocketMQ 入门》](http://www.iocoder.cn/Spring-Boot/RocketMQ/?github) 的[「9. 事务消息」](#)小节
+* [《芋道 Spring Cloud Alibaba 消息队列 RocketMQ 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/RocketMQ/?github) 的[「10. 事务消息」](#)小节
+* [《RocketMQ 源码分析 —— 事务消息》](http://www.iocoder.cn/RocketMQ/message-transaction/?github)
+
+## XA 方案
+
+* [《MyCAT 源码分析 —— XA分布式事务》](http://www.iocoder.cn/MyCAT/xa-distributed-transaction/?github)
+
+## BED 方案
+
+* [《Sharding-JDBC 源码分析 —— 分布式事务（一）之最大努力型》](http://www.iocoder.cn/Sharding-JDBC/transaction-bed/?github)
 
 ---------
 

@@ -11,9 +11,10 @@
 
     <artifactId>lab-52</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>lab-52-multiple-datasource</module>
+        <module>lab-52-seata-at-httpclient-demo</module>
     </modules>
-
 
 </project>

@@ -3,8 +3,8 @@ package cn.iocoder.springboot.lab52.seatademo.service.impl;
 import cn.iocoder.springboot.lab52.seatademo.dao.OrderDao;
 import cn.iocoder.springboot.lab52.seatademo.entity.OrderDO;
 import cn.iocoder.springboot.lab52.seatademo.service.OrderService;
-import cn.iocoder.springboot.lab52.seatademo.service.PayService;
-import cn.iocoder.springboot.lab52.seatademo.service.StorageService;
+import cn.iocoder.springboot.lab52.seatademo.service.AccountService;
+import cn.iocoder.springboot.lab52.seatademo.service.ProductService;
 import com.baomidou.dynamic.datasource.annotation.DS;
 import io.seata.core.context.RootContext;
 import io.seata.spring.annotation.GlobalTransactional;
@@ -22,24 +22,24 @@ public class OrderServiceImpl implements OrderService {
     private OrderDao orderDao;
 
     @Autowired
-    private PayService payService;
+    private AccountService accountService;
 
     @Autowired
-    private StorageService storageService;
+    private ProductService productService;
 
-    @GlobalTransactional
     @Override
     @DS(value = "order-ds")
+    @GlobalTransactional
     public Integer createOrder(Long userId, Long productId, Integer price) throws Exception {
         Integer amount = 1; // 购买数量，暂时设置为 1。
 
         logger.info("[createOrder] 当前 XID: {}", RootContext.getXID());
 
         // 扣减库存
-        storageService.reduceStock(productId, amount);
+        productService.reduceStock(productId, amount);
 
         // 扣减余额
-        payService.reduceBalance(userId, price);
+        accountService.reduceBalance(userId, price);
 
         // 保存订单
         OrderDO order = new OrderDO().setUserId(userId).setProductId(productId).setPayAmount(amount * price);

@@ -13,7 +13,7 @@
     <artifactId>lab-52-multiple-datasource</artifactId>
 
     <dependencies>
-        <!-- TODO web -->
+        <!-- 实现对 Spring MVC 的自动化配置 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -30,7 +30,7 @@
             <version>5.1.48</version>
         </dependency>
 
-        <!-- TODO mybatis -->
+        <!-- 实现对 MyBatis 的自动化配置 -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -44,7 +44,7 @@
             <version>3.0.0</version>
         </dependency>
 
-        <!-- TODO 分布式事务 -->
+        <!-- 实现对 Seata 的自动化配置 -->
         <dependency>
             <groupId>io.seata</groupId>
             <artifactId>seata-spring-boot-starter</artifactId>
