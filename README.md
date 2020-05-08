@@ -1,3 +1,7 @@
+> 友情提示：因为提供了 50000+ 行示例代码，所以艿艿默认注释了所有 Maven Module。
+>
+> 胖友可以根据自己的需要，修改 [`pom.xml`](https://github.com/YunaiV/SpringBoot-Labs/blob/master/pom.xml) 即可。
+
 一个涵盖六个主流技术栈的**正经**仓库：
 * [《Spring Boot 专栏》](https://github.com/YunaiV/SpringBoot-Labs#spring-boot-%E4%B8%93%E6%A0%8F)
 * [《Spring Cloud Alibaba 专栏》](https://github.com/YunaiV/SpringBoot-Labs#spring-cloud-alibaba-%E4%B8%93%E6%A0%8F)
@@ -162,7 +166,7 @@
 ## 注册中心
 
 * [《芋道 Spring Cloud Alibaba 注册中心 Nacos 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Nacos-Discovery/?github) 对应 [labx-01](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-01)
-* 《芋道 Spring Cloud Netflix 注册中心 Eureka 入门》计划中...
+* [《芋道 Spring Cloud Netflix 注册中心 Eureka 入门》](http://www.iocoder.cn/Spring-Cloud/Netflix-Eureka?github) 对应 [labx-22](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-22)
 * 《芋道 Spring Cloud 注册中心 Zookeeper 入门》计划中...
 * 《芋道 Spring Cloud 注册中心 Consul 入门》计划中...
 * 《芋道 Spring Cloud 注册中心 Etcd 入门》计划中...
@@ -182,8 +186,12 @@
 ## API 网关
 
 * [《芋道 Spring Cloud 服务网关 Spring Cloud Gateway 入门》](http://www.iocoder.cn/Spring-Cloud/Spring-Cloud-Gateway/?github) 对应 [labx-08](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-08)
-* 《芋道 Spring Cloud Netflix 服务网关 Zuul 入门》计划中...
+* [《芋道 Spring Cloud Netflix 服务网关 Zuul 入门》](http://www.iocoder.cn/Spring-Cloud/Netflix-Zuul/?github) 对应 对应 [labx-21](https://github.com/YunaiV/SpringBoot-Labs/tree/master/labx-21)
 * [《性能测试 —— Spring Cloud Gateway、Zuul 基准测试》](http://www.iocoder.cn/Performance-Testing/SpringCloudGateway-Zuul-benchmark/?github) 对应 [lab-07](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-07)
+
+> 如下非 Spring Cloud 网关，先放在这里...
+
+* [《芋道 APISIX 极简入门（国产微服务网关）》](http://www.iocoder.cn/iocoder.cn/APISIX/install/?github) 对应 [lab-56](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-56)
 
 ## 配置中心
 
@@ -240,11 +248,13 @@
 * [《芋道 Spring Boot Dubbo 入门》](http://www.iocoder.cn/Spring-Boot/Dubbo/?github)的[「2. XML 配置」](#)和[「3. 注解配置」](#)小节
 
 **[Nacos](http://www.iocoder.cn/Nacos/install/?github)**
+* [《芋道 Spring Boot Dubbo 入门》](http://www.iocoder.cn/Spring-Boot/Dubbo/?github)的[「6. 整合 Nacos」](#)小节
 * [《芋道 Spring Cloud Alibaba 服务调用 Dubbo 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Dubbo/?github)的[「2. 快速入门」](#)小节
 
 ## 服务保障
 
 **[Sentinel](http://www.iocoder.cn/Sentinel/install/?github)**
+* [《芋道 Spring Boot Dubbo 入门》](http://www.iocoder.cn/Spring-Boot/Dubbo/?github)的[「7. 整合 Sentinel」](#)小节
 * [《芋道 Spring Cloud Alibaba 服务调用 Dubbo 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Dubbo/?github)的[「6. 整合 Sentinel」](#)小节
 
 ## 分布式事务
@@ -252,6 +262,9 @@
 **[Seata](http://www.iocoder.cn/Seata/install/?github)**
 * [《芋道 Dubbo 分布式事务 Seata 入门》](http://www.iocoder.cn/Dubbo/Seata/?github) 对应 [lab-53](https://github.com/YunaiV/SpringBoot-Labs/tree/master/lab-53)
 * [《芋道 Spring Cloud Alibaba 分布式事务 Seata 入门》](http://www.iocoder.cn/Spring-Cloud-Alibaba/Seata/?github)的[「2. AT 模式 + Dubbo」](#)小节
+
+**[TCC Transaction](http://www.iocoder.cn/categories/TCC-Transaction/?github)**
+* [《TCC-Transaction 源码分析 —— Dubbo 支持》](http://www.iocoder.cn/TCC-Transaction/dubbo-support/?self)
 
 ## 链路追踪
 
