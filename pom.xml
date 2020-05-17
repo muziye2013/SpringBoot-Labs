@@ -90,8 +90,9 @@
 <!--        <module>labx-19</module>-->
 <!--        <module>labx-20</module>-->
 <!--        <module>labx-21</module>-->
+        <!--<module>labx-22</module>-->
 
-        <module>labx-22</module>
+        <module>ex-01</module>
     </modules>
 
 </project>

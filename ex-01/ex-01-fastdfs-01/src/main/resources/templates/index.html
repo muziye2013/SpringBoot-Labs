@@ -1,0 +1,101 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="http://demo.cssmoban.com/cssthemes6/bpus_16_Bubbly_Dashboard/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Google fonts - Popppins for copy-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,800">
+    <!-- orion icons-->
+    <link rel="stylesheet" href="http://demo.cssmoban.com/cssthemes6/bpus_16_Bubbly_Dashboard/css/orionicons.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="http://demo.cssmoban.com/cssthemes6/bpus_16_Bubbly_Dashboard/css/style.default.css" id="theme-stylesheet"><link id="new-stylesheet" rel="stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="http://demo.cssmoban.com/cssthemes6/bpus_16_Bubbly_Dashboard/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="http://demo.cssmoban.com/cssthemes6/bpus_16_Bubbly_Dashboard/img/favicon.png?3">
+
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=demo.cssmoban.com" as="script"><script src="https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101"></script><script src="https://partner.googleadservices.com/gampad/cookie.js?domain=demo.cssmoban.com&amp;callback=_gfp_s_&amp;client=ca-pub-1542822386688301&amp;cookie=ID%3D69a277907a25737a%3AT%3D1581664418%3AS%3DALNI_MYcmxY444s_Hl_Y-lr5Vqj-z3RS9w&amp;crv=1"></script><script src="https://pagead2.googlesyndication.com/pagead/js/r20200212/r20190131/show_ads_impl_fy2019.js" id="google_shimpl"></script><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=demo.cssmoban.com"></script><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
+<body>
+<div class="d-flex align-items-stretch">
+    <div class="page-holder w-100 d-flex flex-wrap">
+        <div class="container-fluid px-xl-5">
+            <section class="py-5">
+                <div class="row">
+                    <!-- Basic Form-->
+                    <div class="col-lg-6 mb-5">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="h6 text-uppercase mb-0">文件上传下载(示例)</h3>
+                            </div>
+                            <div class="card-body">
+                                <form id="sampleUpload" action="/upload" enctype="multipart/form-data" method="post">
+                                    <input type="file" name="file">
+                                    <button type="submit" class="btn btn-primary">上传</button>
+
+                                </form>
+                                <div id="file_msg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Horizontal Form-->
+                    <div class="col-lg-6 mb-5">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="h6 text-uppercase mb-0">图片上传(含缩略图)</h3>
+                            </div>
+                            <div class="card-body">
+                                <form id="imageUpload" action="/image/upload"  enctype="multipart/form-data" method="post" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg">
+                                    <input type="file" name="file">
+                                    <button type="submit" class="btn btn-primary">上传</button>
+                                </form>
+                                <div id="image_display"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- JavaScript files-->
+<script src="http://demo.cssmoban.com/cssthemes6/bpus_16_Bubbly_Dashboard/vendor/jquery/jquery.min.js"></script>
+<script src="http://demo.cssmoban.com/cssthemes6/bpus_16_Bubbly_Dashboard/vendor/popper.js/umd/popper.min.js"> </script>
+<script src="http://demo.cssmoban.com/cssthemes6/bpus_16_Bubbly_Dashboard/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://demo.cssmoban.com/cssthemes6/bpus_16_Bubbly_Dashboard/vendor/jquery.cookie/jquery.cookie.js"> </script>
+<script src="http://demo.cssmoban.com/cssthemes6/bpus_16_Bubbly_Dashboard/vendor/chart.js/Chart.min.js"></script>
+<script src="http://demo.cssmoban.com/cssthemes6/bpus_16_Bubbly_Dashboard/js/js.cookie.min.js"></script>
+<script src="http://demo.cssmoban.com/cssthemes6/bpus_16_Bubbly_Dashboard/js/front.js"></script>
+<script src="https://cdn.bootcss.com/jquery.form/4.2.2/jquery.form.js"></script>
+
+<script>
+    $(function () {
+        $('#sampleUpload').ajaxForm(function (data) {
+            $("#file_msg").append("<div class=\"alert alert-success\" role=\"alert\">上传成功,文件地址:"+data.content+"</div>");
+            $("#file_msg").append("<a href='/file/"+data.content+"'>点击下载</a>");
+            console.log(data);
+        });
+
+        $('#imageUpload').ajaxForm(function (data) {
+            $("#image_display").append("<img src='/file/"+data.content+"' />");
+            const imagePath = data.content;
+            const imageName = imagePath.substr(0,imagePath.lastIndexOf("."));
+            console.log(imageName);
+            const imageSuffix = imagePath.substr(imagePath.lastIndexOf("."),imagePath.length);
+            console.log(imageSuffix);
+            $("#image_display").append("<img src='/file/"+imageName+"_150x150"+imageSuffix+"' />");
+        });
+    })
+
+</script>
+</body>
+</html>
